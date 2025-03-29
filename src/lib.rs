@@ -2,6 +2,7 @@ use bevy::prelude::*;
 use systems::*;
 
 pub mod components;
+pub mod prelude;
 mod systems;
 
 #[derive(Default)]
