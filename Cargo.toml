@@ -1,0 +1,19 @@
+[package]
+name = "gravix"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.16.0-rc.2", default-features = false, features = [
+    "multi_threaded",
+    "bevy_state",
+    "bevy_asset",
+    "bevy_core_pipeline",
+] }
+avian3d = { git = "https://github.com/Jondolf/avian", branch = "main", default-features = false, features = [
+    "3d",
+    "f32",
+    "parry-f32",
+    "parallel",
+    "simd",
+] }
