@@ -10,19 +10,12 @@ pub fn process_ground_start_sensor(
     mut collision_start_event_reader: EventReader<CollisionStarted>,
 ) {
     for CollisionStarted(c1, c2) in collision_start_event_reader.read() {
-        println!("len: {}", query_groundsensor.iter().len());
-        println!("collision");
         if query_groundsensor.contains(*c1) {
-            println!("collide");
-
             if query_ground.contains(*c2) {
-                println!("inserted");
                 commands.entity(*c1).insert(OnGround);
             }
         } else if query_groundsensor.contains(*c2) {
-            println!("collide");
             if query_ground.contains(*c1) {
-                println!("inserted");
                 commands.entity(*c2).insert(OnGround);
             }
         }
