@@ -2,7 +2,7 @@ use avian3d::prelude::*;
 use bevy::prelude::*;
 
 #[derive(Component, Default)]
-#[require(Collider, CollidingEntities)]
+#[require(Collider)]
 pub struct GroundSensor;
 
 #[derive(Component)]

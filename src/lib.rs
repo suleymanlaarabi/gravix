@@ -5,9 +5,9 @@ pub mod components;
 mod systems;
 
 #[derive(Default)]
-pub struct GroundedPlugin;
+pub struct GravixPlugin;
 
-impl Plugin for GroundedPlugin {
+impl Plugin for GravixPlugin {
     fn build(&self, app: &mut App) {
         app.add_systems(
             Update,
